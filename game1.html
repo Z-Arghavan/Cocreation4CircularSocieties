@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KnowThySDG Game</title>
+    <link href="game1.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.3.4/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-200 font-sans leading-normal tracking-normal">
+    <header class="main-header">
+        <h1 class="header-title">KnowThySDG</h1>
+        <div class="header-controls">
+            <div id="timer" class="timer">00:00</div>
+            <button id="restartButton" class="restart-button">Restart Game</button>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-4">
+        <p class="text-center mb-4">This game is to test your knowledge on the Sustainable Development Goals. Complete
+            the puzzle by guessing the goal title based on the symbol!</p>
+        <div id="game-board" class="grid grid-cols-4 gap-4"></div>
+
+        <div class="my-4">
+            <label for="guessInput" class="block text-lg mb-2">What is this goal?</label>
+            <input id="guessInput" type="text"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight">
+        </div>
+
+        <div class="my-4">
+            <p class="text-lg">Your score: <span id="score">0</span></p>
+        </div>
+
+        <div class="my-4" id="sdg-details">
+            <h3>Correct answer is: <span id="sdg-title"></span></h3>
+            <p id="sdg-description"></p>
+        </div>
+
+
+    </div>
+
+    <script src="game1.js"></script>
+</body>
+
+</html>

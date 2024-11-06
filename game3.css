@@ -1,0 +1,151 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  /* Adjusted to accommodate wider cards */
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.column {
+  flex: 1;
+  margin-right: 20px;
+}
+
+/* to add a bit of space between two columns */
+.column:last-child {
+  margin-right: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 600px;
+  /* Double the previous width */
+  height: 120px;
+  /* Keep the height fixed */
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  box-sizing: border-box;
+  /* Include padding and border in the element's total width/height */
+  text-align: left;
+  /* Align text to the left for readability */
+  overflow: hidden;
+  /* Hide overflow content */
+}
+
+.card p {
+  margin: 0;
+  /* Remove default paragraph margin */
+  line-height: 1.2;
+  /* Adjust line height for the text */
+  text-overflow: ellipsis;
+  /* Add ellipsis (...) for overflowed text */
+  overflow: hidden;
+  /* Hide overflowing text */
+  display: -webkit-box;
+  /* Support multi-line ellipsis */
+  -webkit-line-clamp: 3;
+  /* Limit to 3 lines of text */
+  -webkit-box-orient: vertical;
+}
+
+.selected {
+  background-color: rgb(191, 191, 194);
+}
+
+.correct-match {
+  background-color: green;
+}
+
+.incorrect-match {
+  background-color: red;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.matched {
+  background-color: grey;
+}
+
+.timer,
+.restart-button {
+  padding: 0.25rem 0.5rem;
+  margin-left: 0.5rem;
+  background-color: #FFA500;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 1rem;
+  background-color: #1F1D36;
+  color: #FFA80D;
+}
+
+.header-title {
+  font-size: 1.25rem;
+}
+
+
+/* Progress bar container */
+.progress-container {
+  width: 100%;
+  background-color: #ddd;
+  height: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+/* The actual progress bar */
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 20px;
+  color: white;
+  font-size: 12px;
+}
+/* Bottom Ribbon Styling */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: #888;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.8rem;
+}
+
+footer a {
+  color: #888;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffffff;
+}

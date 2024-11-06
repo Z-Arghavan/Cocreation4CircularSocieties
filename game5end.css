@@ -1,0 +1,134 @@
+/* Basic reset for consistent styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    color: white;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #0A0A30, #1C1C5C, #22226E, #2D2D90,  #3230c1); /* Adjust gradient stops as needed */
+}
+
+/* Updated Header for Positioning the Dots */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000000;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+    font-size: 1.5rem;
+}
+
+header a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-left: 20px;
+    padding: 5px 15px;
+    border: 2px solid #FFFFFF;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header a:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+/* Container for main content */
+.landing-container, .end-container {
+    margin: 100px auto;
+    width: 80%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Ensure text and numbers are left-aligned */
+}
+
+/* Green banner styling */
+.banner {
+    background-color: #FFA500;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Text box styling */
+.text-box {
+    border: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(135deg, #A74EFF, #5C4AFF); /* Gradient for the border */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 1.6;
+    color: black; /* Keep text black */
+    text-align: left; /* Ensure text is left-aligned */
+}
+
+/* Styling for buttons */
+button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    padding: 10px 25px;
+    background-color: transparent; /* Transparent background */
+    border: 2px solid; /* Border for the rim effect */
+    border-radius: 25px; /* Rounded edges */
+    border-image-slice: 1;
+    border-image-source: linear-gradient(135deg, #A74EFF, #5C4AFF); /* Gradient for the border */
+    color: transparent; /* Ensure text is transparent */
+    background-image: linear-gradient(135deg, #A74EFF, #5C4AFF); /* Ensures gradient stays on hover */
+    background-clip: text;
+    -webkit-background-clip: text;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s;
+    z-index: 1;
+}
+
+button:hover {
+    color: transparent; /* Ensure text is transparent */
+    background-image: linear-gradient(135deg, #A74EFF, #5C4AFF); /* Ensures gradient stays on hover */
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+/* Bottom Ribbon Styling */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: #888;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8rem;
+}
+
+footer a {
+    color: #888;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffffff;
+}

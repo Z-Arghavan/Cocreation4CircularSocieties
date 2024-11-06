@@ -1,0 +1,18 @@
+.draggable {
+    width: 50px; /* Set the width of your draggable element */
+    height: 50px; /* Set the height of your draggable element */
+    position: absolute;
+    cursor: pointer;
+    background-color: #f00; /* Placeholder color */
+    text-align: center; /* Center the text inside the box */
+    line-height: 50px; /* Align the text vertically */
+    color: white; /* Color of the text */
+    border: 2px solid #000; /* Optional: border for the element */
+  }
+  
+  /* Initial position for the A1 element */
+  #draggable-A1 {
+    top: 600px; /* Adjust as necessary */
+    left: 50px; /* Adjust as necessary */
+  }
+  

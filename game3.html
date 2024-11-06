@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LCA Impact Category Matching Game</title>
+  <link rel="stylesheet" href="game3.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+
+
+<body>
+  <header class="main-header">
+    <h1 class="header-title">Green Glossary Game</h1>
+    <div class="header-controls">
+      <div id="timer" class="timer">00:00</div>
+      <button id="restartButton" class="restart-button">Restart Game</button>
+    </div>
+  </header>
+  <div class="container">
+    <div class="column">
+      <h2>Phrase</h2>
+      <div id="category-grid"></div>
+    </div>
+    <div class="column">
+      <h2>Description</h2>
+      <div id="unit-grid"></div>
+    </div>
+  </div>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Bottom Ribbon -->
+  <footer>
+    © TU/e 2024
+  </footer>
+
+
+  <script src="game3.js"></script>
+</body>
+
+</html>

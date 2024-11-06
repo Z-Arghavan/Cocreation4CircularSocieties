@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lifecycle Stages Puzzle</title>
+  <link rel="stylesheet" href="stylesUnfinished.css">
+</head>
+
+<body>
+
+  <div class="puzzle-container">
+    <!-- Stages A1 to A3 -->
+    <div id="product-stage" class="stage">
+      <div class="box-container">
+        <div class="box" draggable="true" id="A1">A1</div>
+        <div class="rectangle"></div>
+      </div>
+      <div class="box-container">
+        <div class="box" draggable="true" id="A2">A2</div>
+        <div class="rectangle"></div>
+      </div>
+      <div class="box-container">
+        <div class="box" draggable="true" id="A3">A3</div>
+        <div class="rectangle"></div>
+      </div>
+    </div>
+
+    <!-- Stages A4 to A5 -->
+    <div id="construction-stage" class="stage">
+      <div class="box-container">
+        <div class="box" draggable="true" id="A4">A4</div>
+        <div class="rectangle"></div>
+      </div>
+      <div class="box-container">
+        <div class="box" draggable="true" id="A5">A5</div>
+        <div class="rectangle"></div>
+      </div>
+    </div>
+
+    <!-- Stages B1 to B7 -->
+    <div id="use-stage" class="stage">
+      <div class="box-container">
+        <div class="box" draggable="true" id="B1">B1</div>
+        <div class="rectangle"></div>
+      </div>
+      <div class="box-container">
+        <div class="box" draggable="true" id="B2">B2</div>
+        <div class="rectangle"></div>
+      </div>
+      <!-- Repeat for B3 to B7 -->
+      <div class="box-container">
+        <div class="box" draggable="true" id="B7">B7</div>
+        <div class="rectangle"></div>
+      </div>
+    </div>
+
+    <!-- Stages C1 to C4 -->
+    <div id="end-life-stage" class="stage">
+      <div class="box-container">
+        <div class="box" draggable="true" id="C1">C1</div>
+        <div class="rectangle"></div>
+      </div>
+      <div class="box-container">
+        <div class="box" draggable="true" id="C2">C2</div>
+        <div class="rectangle"></div>
+      </div>
+      <!-- Repeat for C3 to C4 -->
+      <div class="box-container">
+        <div class="box" draggable="true" id="C4">C4</div>
+        <div class="rectangle"></div>
+      </div>
+    </div>
+
+    <!-- Supplementary Information Beyond the Building Life Cycle -->
+    <div id="boundary-info" class="stage">
+      <div class="box" draggable="true" id="D">D</div>
+    </div>
+  </div>
+
+  <div id="rectangle-container">
+    <!-- Rectangles for A stages -->
+    <div class="rectangle-horizontal" draggable="true" id="rect-A1"></div>
+    <div class="rectangle-horizontal" draggable="true" id="rect-A2"></div>
+    <div class="rectangle-horizontal" draggable="true" id="rect-A3"></div>
+    <div class="rectangle-horizontal" draggable="true" id="rect-A4"></div>
+    <div class="rectangle-horizontal" draggable="true" id="rect-A5"></div>
+
+    <!-- Rectangles for B stages -->
+    <div class="rectangle-horizontal" draggable="true" id="rect-B1"></div>
+    <div class="rectangle-horizontal" draggable="true" id="rect-B2"></div>
+    <div class="rectangle-horizontal" draggable="true" id="rect-B3"></div>
+    <div class="rectangle-horizontal" draggable="true" id="rect-B4"></div>
+    <div class="rectangle-horizontal" draggable="true" id="rect-B5"></div>
+    <div class="rectangle-horizontal" draggable="true" id="rect-B6"></div>
+    <div class="rectangle-horizontal" draggable="true" id="rect-B7"></div>
+
+    <!-- Rectangles for C stages -->
+    <div class="rectangle-horizontal" draggable="true" id="rect-C1"></div>
+    <div class="rectangle-horizontal" draggable="true" id="rect-C2"></div>
+    <div class="rectangle-horizontal" draggable="true" id="rect-C3"></div>
+    <div class="rectangle-horizontal" draggable="true" id="rect-C4"></div>
+
+    <!-- Rectangle for D stage -->
+    <div class="rectangle-horizontal" draggable="true" id="rect-D"></div>
+  </div>
+
+  <script src="scriptUnfinished.js"></script>
+</body>
+
+</html>

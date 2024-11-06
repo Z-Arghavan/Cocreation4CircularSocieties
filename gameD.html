@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LifeCycle Stage in the Supply Chain</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+    <link rel="stylesheet" href="gameD.css">
+    <script src="gameD.js" defer></script>
+</head>
+
+<body>
+    <header class="main-header">
+        <h1>Life Cycle and Supply Chain</h1>
+        <div class="header-controls">
+            <div id="timer" class="timer">00:00</div>
+            <button id="restartButton" class="restart-button">Restart Game</button>
+        </div>
+    </header>
+
+    <div class="instruction-section-drag">
+        <div class="dragIt">
+            <h5><strong>Instructions: </strong> Match each life cycle stage to its position in the construction product life cycle supply chain map.<br> Drag the green squares and drop on the on the map.</h5>
+        </div>
+    </div>
+
+    <!-- Draggable items and descriptions -->
+    <section class="draggable-elements">
+        <img src="images/A1.PNG" class="A1 draggable" draggable="true" id="A1" alt="A1" />
+        <img src="images/A2.PNG" draggable="true" id="A2" class="A2 draggable" alt="A2" />
+        <img src="images/A3.PNG" draggable="true" id="A3" class="A3 draggable" alt="A3" />
+        <img src="images/A4.PNG" draggable="true" id="A4" class="A4 draggable" alt="A4" />
+        <img src="images/A5.PNG" draggable="true" id="A5" class="A5 draggable" alt="A5" />
+        <img src="images/B1-B5.png" draggable="true" id="B1-B5" class="B1-B5 draggable" alt="B1-B5" />
+        <img src="images/C1.PNG" draggable="true" id="C1" class="C1 draggable" alt="C1" />
+        <img src="images/C2.PNG" draggable="true" id="C2" class="C2 draggable" alt="C2" />
+        <img src="images/C3.PNG" draggable="true" id="C3" class="C3 draggable" alt="C3" />
+        <img src="images/C4.PNG" draggable="true" id="C4" class="C4 draggable" alt="C4" />
+    </section>
+
+    <!-- Descriptions moved below draggable elements -->
+    <div class="text-section">
+        <div class="product-stage">
+            <h3>A1 - A3 Product stage</h3>
+            <p>A1 Raw material extraction</p>
+            <p>A2 Transport to manufacturing site</p>
+            <p>A3 Manufacturing</p>
+        </div>
+        <div class="construction-stage">
+            <h3>A4 - A5 Construction stage</h3>
+            <p>A4 Transport to construction site</p>
+            <p>A5 Installation / Assembly</p>
+        </div>
+        <div class="use-stage">
+            <h3>B1 - B5 Use stage</h3>
+            <p>B1 Use</p>
+            <p>B2 Maintenance</p>
+            <p>B3 Repair</p>
+            <p>B4 Replacement</p>
+            <p>B5 Refurbishment</p>
+        </div>
+        <div class="end-life-stage">
+            <h3>C1 - C4 End of life stage</h3>
+            <p>C1 Deconstruction & demolition</p>
+            <p>C2 Transport</p>
+            <p>C3 Waste processing</p>
+            <p>C4 Disposal</p>
+        </div>
+    </div>
+
+    <!-- Game container with droppable squares -->
+    <div class="game-container">
+        <section class="droppable-elements">
+            <div class="droppable" data-draggable-id="A1"><span>?</span></div>
+            <div class="droppable" data-draggable-id="A2"><span>?</span></div>
+            <div class="droppable" data-draggable-id="A3"><span>?</span></div>
+            <div class="droppable" data-draggable-id="A4"><span>?</span></div>
+            <div class="droppable" data-draggable-id="A5"><span>?</span></div>
+            <div class="droppable" data-draggable-id="B1-B5"><span>?</span></div>
+            <div class="droppable" data-draggable-id="C1"><span>?</span></div>
+            <div class="droppable" data-draggable-id="C2"><span>?</span></div>
+            <div class="droppable" data-draggable-id="C3"><span>?</span></div>
+            <div class="droppable" data-draggable-id="C4"><span>?</span></div>
+        </section>
+    </div>
+
+    <div id="completionContainer" style="display: none;">
+        <button id="nextStepButton" onclick="goToNextGame()">Next Step</button>
+    </div>
+
+    <footer>
+        © TU/e 2024
+    </footer>
+
+    <script src="game5end.html"></script>
+</body>
+</html>

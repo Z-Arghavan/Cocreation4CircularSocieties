@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCAid - End</title>
+    <link rel="stylesheet" href="game5end.css">
+</head>
+
+<body>
+    <!-- Top Ribbon -->
+    <header>
+        <a href="https://www.linkedin.com/in/arghavanakbarieh" target="_blank">Contact</a> <!-- Link to LinkedIn -->
+    </header>
+
+    <div class="end-container">
+        <div class="robot-container">
+            <img src="images/RobotEND.png" alt="Thank You Robot" class="robot">
+        </div>
+        <div class="content-container">
+            <div class="banner">
+                Welldone!
+            </div>
+            <div class="text-box">
+                You've successfully completed the LCAid serious game. <br> The next passcode is 153 (try 154 if the lock
+                is luck :p)
+            </div>
+            <button class="play-button" onclick="playAgain()">Go to Main Game Menu</button>
+            <!-- Styled Play Again button -->
+        </div>
+    </div>
+
+    <!-- Bottom Ribbon -->
+    <footer>
+        © TU/e 2024
+    </footer>
+
+    <script>
+        function playAgain() {
+            // Redirect to the indexCENTRAL.html page where main.js is loaded
+            window.location.href = "index.html"; // Ensure the path is correct
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,356 @@
+/* Base styling and reset */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    font-family: 'Montserrat', sans-serif;
+    background-color: #eee;
+    color: #111;
+    width: 100vw;
+    padding-top: 60px; /* Adjust to the height of your header */
+
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #000000;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #FFFFFF;
+}
+
+.header-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+h1 {
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 1em;
+    color: #4B0082;
+}
+
+.header-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.timer {
+  padding: 5px 10px;
+  margin-right: 10px;
+  background-color: #5C4AFF;
+  color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Button styling */
+.restart-button {
+  background-color: transparent;
+  padding: 5px 15px;
+  border-radius: 25px;
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.restart-button:hover {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+
+.instruction-section-drag, .instruction-section-drop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.dragIt h5, .dropIt h4 {
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0;
+}
+
+.draggable-elements {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+.draggable {
+  height: 8vh;
+  width: 8vh;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  background-color: white;
+  border: 1px solid #333;
+  border-radius: 5px;
+  position: relative; /* Ensure z-index works */
+  z-index: 10; /* Place draggable elements above most content */
+}
+
+
+.draggable:hover {
+    opacity: 0.7;
+}
+
+/* Game Container with Droppable Elements */
+.game-container {
+  position: relative;
+  background-repeat: no-repeat;
+  background-image: url('images/lcamapnew.jpg');
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 50vh; /* Adjust to match the layout */
+  margin: auto;
+  overflow: hidden; /* Prevent overflow */
+}
+
+.drop-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Droppable Elements */
+.droppable {
+  position: absolute;
+  width: 5vh;
+  height: 5vh;
+  border: 2px dashed #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-weight: bold;
+  color: #333;
+  transition: border-width 0.2s, transform 0.2s;
+}
+/* Positions for A1 through A5 using percentage */
+/* Reset positions (initial guess) */
+.droppable[data-draggable-id="A1"] {
+  top: 10%; 
+  left: 40%; 
+}
+
+.droppable[data-draggable-id="A2"] {
+  top: 30%; 
+  left: 30%; 
+}
+
+.droppable[data-draggable-id="A3"] {
+  top: 50%; 
+  left: 31.5%; 
+}
+
+.droppable[data-draggable-id="A4"] {
+  top: 67%; 
+  left: 40%; 
+}
+
+
+.droppable[data-draggable-id="A5"] {
+  top: 33%; 
+  left: 46%; 
+}
+
+
+.droppable[data-draggable-id="B1-B5"] {
+  top: 20%; 
+  left: 52%;
+}
+
+.droppable[data-draggable-id="C1"] {
+  top: 40%; 
+  left: 55%; 
+}
+
+.droppable[data-draggable-id="C2"] {
+  top: 49%; 
+  left: 60%; 
+}
+
+.droppable[data-draggable-id="C3"] {
+  top: 11%; 
+  left: 60%; 
+}
+
+.droppable[data-draggable-id="C4"] {
+  top: 65%; 
+  left: 65%; 
+}
+
+.droppable-hover {
+  border-color: #00FF00; /* Change to green to indicate it's ready for drop */
+  transform: scale(1.1); /* Slight enlargement for visual cue */
+}
+
+.draggable.dragging {
+  opacity: 0.7; /* Lower opacity during dragging */
+}
+
+.droppable.droppable-hover {
+    border-width: 3px;
+    transform: scale(1.1);
+}
+
+/* When a droppable has been successfully dropped on */
+.droppable.dropped {
+    background-color: rgba(0, 0, 0, 0.2); /* Dim background to a darker color */
+    border-color: rgba(0, 0, 0, 0.3); /* Reduce the visibility of the border */
+    transition: all 0.5s ease; /* Smooth transition for all changes */
+}
+/* When an item is dropped and used */
+.draggable.used {
+  opacity: 0.5; /* Optional: indicate that it has been used */
+  pointer-events: none; /* Prevent further interaction */
+}
+
+.draggable {
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Description Section */
+.text-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #eee;
+    color: #333;
+    font-size: 0.8rem;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%; /* Ensure full width */
+}
+
+.text-section div {
+    flex-basis: 22%;
+    margin: 10px;
+}
+
+.text-section h3 {
+    color: #4B0082;
+    margin-bottom: 0.3rem;
+}
+
+.text-section p {
+    color: #333;
+    margin-bottom: 0.1rem;
+}
+
+/* Styling for the completion container */
+#completionContainer {
+  position: fixed; /* Fix it to the center of the screen */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9); /* Slight background to make it stand out */
+  padding: 20px; /* Padding for better appearance */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for emphasis */
+  z-index: 2000; /* High z-index to make sure it is on top of other elements */
+}
+
+/* Adjust the footer to make sure it stays below other content */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: #888;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.8rem;
+  z-index: 100; /* Lower z-index to ensure footer doesn't overlap important elements */
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+
+    .draggable-elements {
+        margin: 1.5rem;
+    }
+
+    .text-section {
+        font-size: 0.7rem;
+    }
+}
+.content-wrapper {
+  margin-top: 60px; /* Adjust to the height of your header */
+}
+
+.map-container {
+  position: relative;
+  width: 90vw; /* or any percentage that fits your layout */
+  max-width: 1000px; /* Maintain a max width for larger screens */
+  aspect-ratio: 2 / 1; /* Ensures consistent scaling */
+  margin: 0 auto;
+  background: url('images/lcamapnew.jpg') center/contain no-repeat;
+  overflow: hidden;
+}
+/* Style for the cloned draggable after being dropped */
+.dropped-image {
+  height: 100%;
+  width: 100%;
+  object-fit: contain; /* Maintain aspect ratio */
+  opacity: 1; /* Keep the dropped image clearly visible */
+  pointer-events: none; /* Prevent further interactions */
+}
+
+.draggable.dimmed {
+  opacity: 0.3; /* Reduce the opacity to create a dimmed effect */
+  pointer-events: none; /* Disable further interaction */
+  filter: grayscale(100%); /* Optionally, turn it to grey to emphasize it's used */
+  transition: opacity 0.5s ease, filter 0.5s ease; /* Smooth transition for dimming */
+}
+
+/* Style for the next button */
+#nextStepButton {
+  padding: 15px 30px; /* Increase padding for better size */
+  background-color: #FFA500; /* Bright orange color */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1.5rem; /* Larger font size */
+  cursor: pointer; /* Change the cursor to a pointer on hover */
+  margin-top: 20px; /* Add space above the button */
+}
+
+#nextStepButton:hover {
+  background-color: #FF8C00; /* Darker orange on hover */
+}

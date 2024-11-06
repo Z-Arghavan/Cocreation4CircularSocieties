@@ -1,0 +1,278 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 80px auto 0 auto;
+    /* Adjust margin to account for fixed header */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    /* Ensure the grid and image are spaced out */
+    align-items: flex-start;
+    /* Align items at the top */
+    flex-wrap: wrap;
+    /* Allow the items to wrap if needed for visibility */
+}
+
+/* Adjust the image container to ensure it stays on the right */
+#lca-image {
+    width: 44%;
+    /* Increased size by 10% */
+    margin-left: 20px;
+    /* Space between the cards and the image */
+}
+
+#lca-full-image {
+    width: 100%;
+    /* Ensure the image fits within its container */
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+}
+
+/* Flexbox adjustments for other elements (grids, cards) */
+.column {
+    flex: 1;
+    margin-right: 10px;
+    min-width: 300px;
+    /* Ensure columns don't shrink too much */
+    text-align: left;
+    /* Ensure text is left-aligned */
+}
+
+.column:last-child {
+    margin-right: 0;
+}
+
+/* Font size for the headers "Concept" and "Definition" */
+.column h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    /* Decrease font size */
+    color: #333;
+}
+
+/* Font size for the items like "Cradle to Gate", "Cradle to Practical Completion", etc. */
+.card {
+    font-size: 0.9rem;
+    /* Decrease font size for card items */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 100px;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+/* Reduce the font size for the definitions (right column) */
+#unit-grid .card {
+    font-size: 0.9rem;
+    /* Ensure both sides have the same font size */
+}
+
+#category-grid .card {
+    font-size: 0.9rem;
+    /* Ensure both sides have the same font size */
+}
+
+/* Same selection and match styling */
+.selected {
+    background-color: rgb(191, 191, 194);
+}
+
+.correct-match {
+    background-color: green;
+}
+
+.incorrect-match {
+    background-color: red;
+}
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Styling for timer, progress bar, and other elements */
+#timer {
+    padding: 0.25rem 0.5rem;
+    margin-left: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #FFA80D;
+}
+
+#restartButton {
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+    border: 2px solid;
+    border-radius: 25px;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(135deg, #A74EFF, #5C4AFF);
+    color: transparent;
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    background-image: linear-gradient(135deg, #A74EFF, #5C4AFF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: color 0.3s;
+}
+
+.restart-button:hover {
+    color: transparent;
+    background-image: linear-gradient(135deg, #A74EFF, #5C4AFF);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 60px;
+}
+
+.header-title {
+    font-size: 1.5rem;
+    text-align: left;
+    /* Ensure title text is left-aligned */
+    font-weight: bold;
+    margin: 0;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+}
+
+/* Progress bar container */
+.progress-container {
+    width: 100%;
+    background-color: #ddd;
+    height: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* The actual progress bar */
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    font-size: 12px;
+}
+
+/* Description box styling */
+.description-box {
+    background-color: #0A0A30;
+    padding: 15px;
+    margin-top: 15px;
+    width: 70%;
+    text-align: left;
+    display: none;
+    /* Hidden until a correct answer is selected */
+    margin: 0 auto;
+    /* Center align */
+    color: white;
+}
+
+#description-text {
+    font-size: 16px;
+    color: black;
+}
+
+
+.instruction-box {
+    background-color: #0A0A30;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    color: white;
+}
+
+/* Bottom Ribbon Styling */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: #888;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8rem;
+}
+
+footer a {
+    color: #888;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+#nextStepButton {
+    padding: 15px 30px;
+    border: none; /* Remove default border */
+    border-radius: 25px; /* Rounded corners */
+    background: linear-gradient(135deg, #A74EFF, #5C4AFF); /* Gradient background */
+    color: white; /* Text color */
+    font-size: 1.5rem; /* Larger font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s, transform 0.2s;
+}
+
+#nextStepButton:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    background: linear-gradient(135deg, #5C4AFF, #A74EFF); /* Reverse gradient for hover effect */
+}
+
+
+#nextStepContainer {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background overlay */
+    padding: 20px;
+    border-radius: 10px;
+}

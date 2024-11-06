@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Cradle Quest</title>
+  <link rel="stylesheet" href="gameC.css"> <!-- Link to your external CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <!-- Confetti script for effect -->
+</head>
+
+<body>
+  <header class="main-header">
+    <h1 class="header-title">The Cradle Quest</h1>
+    <div class="header-controls">
+      <div id="timer" class="timer">00:00</div>
+      <button id="restartButton" class="restart-button">Restart Game</button>
+    </div>
+  </header>
+
+  <!-- Instruction Box -->
+  <div class="instruction-box">
+    <p><strong>Instruction:</strong> Look at the life cycle stages and the various cradle concepts. Match the concept
+      with the definition.</p>
+  </div>
+
+  <!-- Main container for category grid, unit grid, and image -->
+  <div class="container">
+    <!-- Left column for Concept -->
+    <div class="column">
+      <h2>Concept</h2>
+      <div id="category-grid"></div> <!-- Your existing category grid -->
+    </div>
+
+    <!-- Right column for Definition -->
+    <div class="column">
+      <h2>Definition</h2>
+      <div id="unit-grid"></div> <!-- Your existing unit grid -->
+    </div>
+
+    <!-- Image section -->
+    <div id="lca-image">
+      <img src="images/LCAStages.png" alt="LCA Stages" id="lca-full-image">
+    </div>
+  </div>
+
+  <!-- Description section, placed below the container -->
+  <h2>Description</h2>
+  <div class="description-box" id="description-box">
+    <p id="description-text"></p>
+  </div>
+
+  <!-- Progress bar at the bottom -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- "Next Step" button, initially hidden, appears after game completion -->
+  <div id="nextStepContainer" style="display: none;">
+    <button id="nextStepButton" onclick="goToNextGame()">Next Step</button>
+  </div>
+
+  <footer>
+    © TU/e 2024
+  </footer>
+
+  <script src="gameC.js"></script> <!-- External JavaScript file -->
+</body>
+
+</html>

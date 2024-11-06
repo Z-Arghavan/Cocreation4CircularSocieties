@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circucity - Monopoly-Like Game</title>
+  <link rel="stylesheet" href="stylesR.css"> <!-- Link to the CSS file -->
+</head>
+
+<!-- Top Ribbon with Game Name -->
+<div class="top-ribbon">
+  <h1>Circucity</h1>
+  <!-- Game Message -->
+  <div id="game-message"></div>
+  <button id="reset-game" class="reset-btn">Reset Game</button>
+  <!-- Timer Display (New addition) -->
+  <div id="timer" class="timer-display">Time: 00:00</div>
+</div>
+
+
+<div class="main-container">
+  <!-- Icon Legend Section -->
+  <div class="icon-description">
+    <p><strong>Icon Legend</strong></p>
+    <ul>
+      <li>🍃: Circular Economy Strategies</li>
+      <li>💡: Innovation Strategies</li>
+      <li>💀: Penalties</li>
+      <li>♻️: Mini-game Stop</li>
+    </ul>
+  </div>
+
+  <!-- Dice Section -->
+  <div class="dice-and-buttons">
+    <div id="dice-display" class="dice">🎲</div>
+    <button id="roll-dice">Roll Dice</button>
+  </div>
+
+  <!-- Token Display Section -->
+  <div class="token-area">
+    <div class="token">
+      <strong>Available Token: <span id="initial-token">100</span></strong>
+    </div>
+    <div class="token">
+      <strong>Circular Token: <span id="circular-token">0</span></strong>
+    </div>
+  </div>
+
+  <!-- Accept/Reject Section -->
+  <div id="decision-buttons" class="decision-buttons">
+    <p>Do you accept this strategy?</p>
+    <button id="accept-btn">Accept</button>
+    <button id="reject-btn">Reject</button>
+  </div>
+</div>
+
+<!-- Monopoly-Like Board -->
+<div class="board-container">
+  <!-- Top Row (Squares 1 - 8) -->
+  <div class="space" id="square-1">
+    <strong>START</strong><br>
+    <span>Starting Point</span><br>
+    <div class="icon">🏁</div>
+  </div>
+  <div class="space" id="square-2">
+    <strong>Design for deconstruction</strong><br>
+    <span> 20 Tokens</span><br>
+    <div class="icon">🍃</div>
+  </div>
+  <div class="space" id="square-3">
+    <strong>Design for disassembly</strong><br>
+    <span> 20 Tokens</span><br>
+    <div class="icon">🍃</div>
+  </div>
+  <div class="space" id="square-4">
+    <strong>Demolition site</strong><br>
+    <span>-40% Penalty</span><br>
+    <div class="icon">💀</div>
+  </div>
+  <div class="space" id="square-5">
+    <strong>Reuse structural frame</strong><br>
+    <span> 30 Tokens</span><br>
+    <div class="icon">🍃</div>
+  </div>
+  <div class="space" id="square-6">
+    <strong>Design for adaptability</strong><br>
+    <span> 30 Tokens</span><br>
+    <div class="icon">🍃</div>
+  </div>
+  <div class="space" id="square-7">
+    <strong>Design for regeneration</strong><br>
+    <span> 40 Tokens</span><br>
+    <div class="icon">🍃</div>
+  </div>
+  <div class="space" id="square-8">
+    <strong>Mini-Game Stop: R Hierarchy</strong><br>
+    <span>Earn 20 Circular Tokens</span><br>
+    <div class="icon">♻️</div>
+  </div>
+
+  <!-- Left Column (Squares 22, 21, 20, 19) -->
+  <div class="space" id="square-9">
+    <strong>Digital Twin</strong><br>
+    <span>+20% Innovation Reward</span><br>
+    <div class="icon">💡</div>
+  </div>
+  <div class="description-space" id="description1">
+    <p>Description Area</p> <!-- This is where square descriptions will appear -->
+  </div>
+  <div class="space green" id="square-10">
+    <strong>Prefabrication</strong><br>
+    <span> 20 Tokens</span><br>
+    <div class="icon">🍃</div>
+  </div>
+  <div class="space purple" id="square-11">
+    <strong>Landfill Tax</strong><br>
+    <span>-10% Penalty</span><br>
+    <div class="icon">💀</div>
+  </div>
+  <div class="space blue" id="square-12">
+    <strong>Mini-Game Stop: D Hierarchy</strong><br>
+    <span>Earn 20 Circular Tokens</span><br>
+    <div class="icon">♻️</div>
+  </div>
+
+  <!-- Bottom Row (Squares 18 - 13) -->
+  <div class="space" id="square-13">
+    <strong>Product as a Service</strong><br>
+    <span>+20% Innovation Reward</span><br>
+    <div class="icon">💡</div>
+  </div>
+  <div class="space" id="square-14">
+    <strong>Bio-based materials</strong><br>
+    <span> 10 Tokens</span><br>
+    <div class="icon">🍃</div>
+  </div>
+  <div class="space" id="square-15">
+    <strong>Hazardous materials</strong><br>
+    <span>-10% Penalty</span><br>
+    <div class="icon">💀</div>
+  </div>
+  <div class="space" id="square-16">
+    <strong>Waste audit</strong><br>
+    <span>+10% Innovation Reward</span><br>
+    <div class="icon">💡</div>
+  </div>
+  <div class="space" id="square-17">
+    <strong>Maintenance and retrofit</strong><br>
+    <span> 10 Tokens</span><br>
+    <div class="icon">🍃</div>
+  </div>
+  <div class="space" id="square-18">
+    <strong>Construction and demolition waste</strong><br>
+    <span>-10% Penalty</span><br>
+    <div class="icon">💀</div>
+  </div>
+
+  <!-- Right Column (Squares 19 - 22) -->
+  <div class="space green" id="square-19">
+    <strong>Mini-Game Stop: Circular Resources</strong><br>
+    <span>Earn 20 Circular Tokens</span><br>
+    <div class="icon">♻️</div>
+  </div>
+  <div class="space green" id="square-20">
+    <strong>Material Bank</strong><br>
+    <span>+30% Innovation Reward</span><br>
+    <div class="icon">💡</div>
+  </div>
+  <div class="space grey" id="square-21">
+    <strong>Digital Product Passport</strong><br>
+    <span>+20% Innovation Reward</span><br>
+    <div class="icon">💡</div>
+  </div>
+  <div class="space blue" id="square-22">
+    <strong>Design with reusables</strong><br>
+    <span> 40 Tokens</span><br>
+    <div class="icon">🍃</div>
+  </div>
+</div>
+
+<!-- Bottom Ribbon -->
+<div class="bottom-ribbon">
+  <p>Copyright @ 2024 TU/e</p>
+</div>
+
+<!-- Game Pawn (Game Piece) -->
+<div id="pawn" class="pawn"></div> <!-- Single Pawn -->
+
+
+
+
+<script src="scriptR.js"></script> <!-- Link to the JavaScript file -->
+</body>
+
+</html>

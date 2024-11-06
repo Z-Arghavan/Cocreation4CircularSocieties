@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Chatbox</title>
+  <link rel="stylesheet" href="stylesChatbox.css">
+</head>
+<body>
+
+  <header>
+    <!-- Any additional navigation or links -->
+    <a href="#">Home</a>
+    <a href="#">About</a>
+  </header>
+
+  <div class="content-wrapper">
+    <div class="robot-container">
+      <img src="robot.png" alt="Robot" class="robot">
+    </div>
+    <div class="text-content">
+      <h1>Welcome to the AI Chat</h1>
+      <button class="play-button">Start Game</button>
+
+      <!-- Chatbox UI -->
+      <div id="chatbox">
+        <div id="chatbox-header">Ask a Question</div>
+        <div id="chatbox-messages"></div>
+        <input type="text" id="chatbox-input" placeholder="Type your question..." />
+        <button id="chatbox-send">Send</button>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Your Game. All Rights Reserved.</p>
+  </footer>
+
+  <script src="scriptsChatbox.js"></script>
+</body>
+</html>

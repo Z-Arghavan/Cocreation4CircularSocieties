@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CircuCity Resource Matching Game</title>
+    <link rel="stylesheet" href="newGame1.css"> <!-- Link to your external CSS -->
+</head>
+
+<body>
+    <header class="main-header">
+        <h1 class="header-title">CircuCity Resource Matching Game</h1>
+        <div class="header-controls">
+            <div id="timer" class="timer">00:00</div>
+            <button id="restartButton" class="restart-button">Restart Game</button>
+        </div>
+    </header>
+
+    <!-- Game Container -->
+    <div class="container">
+        <div class="column">
+            <h2>Type</h2>
+            <div id="category-grid" class="grid">
+                <!-- Categories will be dynamically added by the JS -->
+            </div>
+        </div>
+
+        <div class="column">
+            <h2>Description</h2>
+            <div id="unit-grid" class="grid">
+                <!-- Units will be dynamically added by the JS -->
+            </div>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button id="complete-game" class="complete-btn" style="display: none;">Complete Game</button>
+    </div>
+
+    <!-- Bottom ribbon -->
+    <div class="ribbon-bottom">Copyrigh @ 2024 TU/e</div>
+
+    <script src="newGame1.js"></script> <!-- External JavaScript file -->
+</body>
+
+</html>

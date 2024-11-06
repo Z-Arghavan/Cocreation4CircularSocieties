@@ -1,0 +1,159 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #0A0A30, #1C1C5C, #22226E, #2D2D90,  #3230c1); /* Adjust gradient stops as needed */
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Top Ribbon styling */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000000;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+header a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-left: 20px;
+    padding: 5px 15px;
+    border: 2px solid #FFFFFF;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header a:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+/* Main Content Layout */
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px; /* Adjust for header */
+    padding: 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px; /* Space between buttons and robot */
+}
+
+.game-buttons button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    color: #FFFFFF;
+    background-color: #6AA84F;
+    padding: 20px 30px;
+    border: none;
+    border-radius: 15px;
+    width: 400px; /* Adjusted width */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s, transform 0.2s, color 0.3s, font-weight 0.3s;
+    text-align: left;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.game-buttons button:hover {
+    color: transparent; /* Make the text itself transparent */
+    background-image: linear-gradient(135deg, #A74EFF, #5C4AFF); /* Gradient for text */
+    background-clip: text;
+    -webkit-background-clip: text; /* Webkit compatibility for gradient text */
+    border: 2px solid transparent; /* Make sure there’s a border to apply gradient to */
+    border-image: linear-gradient(135deg, #A74EFF, #5C4AFF) 1; /* Gradient for the border */
+}
+
+
+/* Styling for the black circle behind the arrow */
+.arrow-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000; /* Black background */
+    color: #FFFFFF; /* White arrow */
+    width: 30px; /* Diameter of the circle */
+    height: 30px; /* Diameter of the circle */
+    border-radius: 50%; /* Makes the background circular */
+    font-size: 1.2rem; /* Size of the arrow */
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for the arrow circle */
+.game-buttons button:hover .arrow-circle {
+    background-image: linear-gradient(135deg, #A74EFF, #5C4AFF); /* Gradient background */
+}
+
+
+
+/* Right Side: Floating Robot Image */
+.robot-container {
+    animation: float 3s ease-in-out infinite;
+}
+
+.robot {
+    width: 500px; /* Adjust the size of the robot image */
+}
+
+/* Float animation for the robot */
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(10px, -10px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Footer Styling */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: #888;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8rem;
+}
+
+footer a {
+    color: #888;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffffff;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Over - KnowThySDG</title>
+    <link href="game1.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.3.4/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-200 font-sans leading-normal tracking-normal">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold mt-8">🎉 Congratulations!</h1>
+        <h3 class="mt-4">
+            The Sustainable Development Goals (SDGs) are a set of 17 goals created by the United Nations to make the world a better place by 2030. Sustainability isn't just about taking care of the environment. It's about a balance between three things: the environment, the economy, and society. These goals are important because they help countries work together to solve big problems while protecting nature, supporting people's well-being, and ensuring fair opportunities for everyone, both now and in the future. It’s a holistic view that looks at the big picture.
+        </h3>
+        <p class="text-xl mt-4">You have completed the KnowThySDG Game! Your next code is 154 (try 153 if not working)! See if you can use it in the escape room!</p>
+
+        <div class="flex justify-center">
+            <img src="images/SDG.png" alt="SDG Image" class="mt-4 mx-auto" style="max-width: 100%; height: auto;">
+        </div>
+
+        <!-- Button to go back to the main game page -->
+        <button id="goToMainMenu" class="bg-blue-500 text-white py-2 px-4 rounded mt-6">
+            Go to Main Game Menu
+        </button>
+    </div>
+
+    <script>
+        // Add an event listener to the button to go back to the main game page
+        document.getElementById('goToMainMenu').addEventListener('click', () => {
+            window.location.href = "index.html"; // Update this to the correct path of your main menu
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: white; /* Dark background */
+    color: #F8A70A; /* Light text for contrast */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+    background-color: #FFFFFF; /* Set background color to white */
+}
+
+h1 {
+    color: #F8A70A; /* Goldish tone for headings */
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: black; /* Light grey for paragraph text */
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 0.1rem; /* Reduce top margin */
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 columns */
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background-color: #342E47; /* Card background color */
+    border-radius: 10px;
+    height: 150px; /* Adjust as necessary to fit images */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+    position: relative; /* Necessary for absolute positioning of children */
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back of the card when it is not facing the viewer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-front {
+    background-color: #574B90;
+    transform: rotateY(180deg);/* Initially hide the front */
+}
+
+.card-back {
+    background-image: url('images/SDGBACK.png');
+    background-size: cover;
+    transform: rotateY(0deg); /* Initially show the back */
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg); /* Flips the card to show the front */
+}
+
+.card-front img, .card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Covers the card area, may crop the image */
+    display: block;
+}
+
+input[type="text"] {
+    border: 2px solid #574B90; /* Input border color */
+    border-radius: 5px;
+    padding: 0.5rem;
+    color: black;
+    background-color: transparent;
+    width: 100%;
+}
+
+input[type="text"]::placeholder {
+    color: #A9A9A9; /* Placeholder text color */
+}
+
+label {
+    color: black; /* Matching the heading color */
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+#score {
+    color: black; /* Goldish tone for score */
+    font-size: 1.25rem;
+}
+
+
+/* I added this part to turn the "Correct answer is" to green */
+#sdg-details h3 {
+    text-align: center; /* Centers the text */
+    color: #0FAE96; /* Sets the text color */
+  }
+
+
+#sdg-description {
+  text-align: center; /* Centers the text */
+  color: black; /* Sets the text color to white */
+}
+
+#sdg-description {
+  background-color: transparent; /* Ensures the background doesn't obscure the text */
+  border: none; /* Removes the border */
+  resize: none; /* Prevents resizing the textarea */
+}
+
+
+
+/* this part is  to make sure that the cards stay flipped on after they are played once*/
+.card.revealed .card-back {
+    display: block; /* Show the card back content */
+}
+
+.card.revealed .card-inner {
+    transform: rotateY(180deg); /* Ensure the card stays flipped */
+}
+
+/* Header Styles */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.1rem; /* Reduced top and bottom padding */
+    background-color: #1F1D36;
+    color: #FFA80D;
+  }
+  
+  .header-title {
+    font-size: 1.5rem; /* Adjust font-size as necessary */
+  }
+  
+  .header-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .timer {
+    margin-right: 0.5rem; /* Spacing between timer and button */
+  }
+  
+  .restart-button:hover {
+    background-color: #cc8400;
+  }
+
+
+  #goToMainMenu {
+    background-color: #cc8400;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#goToMainMenu:hover {
+    background-color: #3e8e41; /* Darker green */
+}
+

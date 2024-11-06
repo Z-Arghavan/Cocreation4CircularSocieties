@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LCA Impact Category Matching Game</title>
+  <link rel="stylesheet" href="gameB.css"> <!-- Link to your external CSS -->
+</head>
+
+<body>
+
+  <header class="main-header">
+    <h1 class="header-title">LCA Impact Category Matching Game</h1>
+    <div class="header-controls">
+      <div id="timer" class="timer">00:00</div>
+      <button id="restartButton" class="restart-button">Restart Game</button>
+    </div>
+  </header>
+
+  <!-- Small note below the header ribbon -->
+  <div class="note">
+    <p><strong>Environmental impacts aren't just about carbon emissions.</strong> Many materials also consume excessive
+      water, contribute to air pollution, or generate significant waste during their life cycle.</p>
+    <p>In this game, you'll explore various <strong>Impact Categories</strong> to understand the broader effects beyond
+      carbon emissions, helping you make more informed, sustainable choices.</p>
+  </div>
+
+  <!-- Game Container -->
+  <div class="container">
+    <div class="column">
+      <h2>Impact Categories</h2>
+      <div id="category-grid">
+        <!-- Categories will be dynamically added by the JS -->
+      </div>
+    </div>
+    <div class="column">
+      <h2>Units</h2>
+      <div id="unit-grid">
+        <!-- Units will be dynamically added by the JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Category Info Box -->
+  <div id="category-info" class="description-box">
+    <!-- This will show selected category details -->
+  </div>
+
+  <!-- "Next Step" button, initially hidden, appears after completing the game -->
+  <div id="nextStepContainer" style="display: none;">
+    <button id="nextStepButton" onclick="goToNextGame()">Next Step</button>
+  </div>
+
+  <!-- Bottom Ribbon -->
+  <footer>
+    © TU/e 2024
+  </footer>
+
+  <script src="gameB.js"></script> <!-- External JavaScript file -->
+</body>
+
+</html>

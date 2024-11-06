@@ -1,0 +1,143 @@
+/* Basic reset for consistent styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page Background */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    color: white;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #0A0A30, #1C1C5C, #22226E, #2D2D90,  #3230c1); /* Adjust gradient stops as needed */
+}
+
+
+
+/* Updated Header for Positioning the Dots */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000000;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+
+header a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-left: 20px;
+    padding: 5px 15px;
+    border: 2px solid #FFFFFF;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header a:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+/* Content Wrapper for Side-by-Side Layout */
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px; /* Adjust for fixed header */
+}
+
+.robot-container {
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+    margin-right: 20px; /* Space between robot and text */
+}
+
+.robot {
+    width: 600px; /* Increased size to make the robot larger */
+}
+
+.text-content {
+    text-align: left;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(10px, -10px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+h1 {
+    font-family: 'Alpha'; /* Replace with 'Bebas Neue' if desired */
+    font-size: 2.5rem;
+    margin-top: 20px;
+    letter-spacing: 1px; /* Slight letter-spacing for compactness */
+    line-height: 1.1; /* Adjust line-height for a compact look */
+    text-transform: uppercase; /* Optional: make all text uppercase */
+}
+
+.play-button {
+    font-family: 'Poppins', sans-serif; /* Set Poppins font */
+    color: #FFFFFF; /* White text */
+    font-size: 1.5rem;
+    padding: 10px 25px;
+    background-color: transparent; /* Transparent background */
+    border: 2px solid; /* Border for the rim effect */
+    border-radius: 25px; /* Rounded edges */
+    border-image-slice: 1;
+    border-image-source: linear-gradient(135deg, #A74EFF, #5C4AFF); /* Gradient for the border */
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s;
+    z-index: 1;
+}
+
+.play-button:hover {
+    color: transparent; /* Ensure text is transparent */
+    background-image: linear-gradient(135deg, #A74EFF, #5C4AFF); /* Ensures gradient stays on hover */
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+
+
+
+/* Bottom Ribbon Styling */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: #888;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8rem;
+}
+
+footer a {
+    color: #888;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffffff;
+}

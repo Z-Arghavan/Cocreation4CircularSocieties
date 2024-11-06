@@ -1,0 +1,75 @@
+/* General page styling */
+body {
+    background-color: #1B1634; /* Dark background for ribbons */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* White middle section styling */
+.main-content {
+    background-color: white; /* White background for the middle section */
+    padding: 50px 0; /* Padding to give some space */
+    text-align: center;
+}
+
+/* Title styling */
+h1 {
+    font-size: 2.5em;
+    color: #F5A623; /* Bright orange color for the title */
+    margin: 0;
+    padding-top: 20px;
+}
+
+/* Game buttons container */
+.game-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* Styling for the buttons */
+button {
+    background-color: #1B1634; /* Same as ribbon color */
+    border: 2px solid #F5A623; /* Bright border */
+    color: #F5A623;
+    font-size: 1.5em;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 30px; /* Rounded edges */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 500px; /* Fixed width for equal button sizes */
+    height: 100px; /* Fixed height for equal button sizes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #F5A623;
+    color: #1B1634; /* Inverts colors on hover */
+}
+
+/* Ribbon at the top */
+.ribbon {
+    background-color: #1B1634; /* Dark background for the ribbon */
+    padding: 20px 0;
+    text-align: center;
+    color: #F5A623; /* Bright text on the ribbon */
+    font-size: 2em;
+}
+
+/* Footer styling (smaller bottom ribbon) */
+footer {
+    background-color: #1B1634; /* Same background as the top ribbon */
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 1em;
+    padding: 5px 0; /* Reduce padding for a smaller footer ribbon */
+    height: 10px; /* Set a specific height */
+}

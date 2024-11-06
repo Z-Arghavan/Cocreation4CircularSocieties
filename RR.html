@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circucity</title>
+  <link rel="stylesheet" href="stylesR.css"> <!-- Link to the CSS file -->
+</head>
+
+<body>
+  <!-- Top Ribbon -->
+  <div class="top-ribbon">
+    <h1>Circucity</h1>
+    <div class="top-right">
+      <span id="timer">Time: 00:00</span>
+      <button id="reset-button" class="game-button">Reset Game</button>
+    </div>
+  </div>
+
+  <!-- Horizontal section for dice, strategy question, and tokens -->
+  <div class="horizontal-section">
+    <!-- Token Section -->
+    <div class="token-sidebar">
+      <div class="token">
+        Available Tokens: <span id="initial-token">10</span>
+      </div>
+      <div class="token">
+        Circular Tokens: <span id="circular-token">145</span>
+      </div>
+    </div>
+
+    <!-- Dice Section -->
+    <div class="dice-section">
+      <div id="dice-display" class="dice">🎲</div>
+      <button id="roll-dice" class="game-button">Roll Dice</button>
+    </div>
+
+    <!-- Strategy Decision Section -->
+    <div class="strategy-sidebar">
+      <p id="strategy-message">Do you accept this strategy?</p>
+      <div id="decision-buttons">
+        <button id="accept-btn" class="game-button">Accept</button>
+        <button id="reject-btn" class="game-button">Reject</button>
+      </div>
+    </div>
+
+    <!-- Monopoly-Like Board -->
+    <div class="board-container">
+      <!-- Top Row (Squares 1 - 8) -->
+      <div class="space" id="square-1">Square 1</div>
+      <div class="space" id="square-2">Square 2</div>
+      <div class="space" id="square-3">Square 3</div>
+      <div class="space" id="square-4">Square 4</div>
+      <div class="space" id="square-5">Square 5</div>
+      <div class="space" id="square-6">Square 6</div>
+      <div class="space" id="square-7">Square 7</div>
+      <div class="space" id="square-8">Square 8</div>
+
+      <!-- Left Column (Squares 22, 21, 20, 19) -->
+      <div class="space" id="square-9">Square 9</div>
+      <div class="description-space" id="description1">
+        <p>Description Area</p> <!-- This is where square descriptions will appear -->
+      </div>
+      <div class="space green" id="square-10">Square 10</div>
+      <div class="space purple" id="square-11">Square 11</div>
+      <div class="space blue" id="square-12">Square 12</div>
+
+      <!-- Bottom Row (Squares 18 - 13) -->
+      <div class="space" id="square-13">Square 13</div>
+      <div class="space" id="square-14">Square 14</div>
+      <div class="space" id="square-15">Square 15</div>
+      <div class="space" id="square-16">Square 16</div>
+      <div class="space" id="square-17">Square 17</div>
+      <div class="space" id="square-18">Square 18</div>
+
+      <!-- Right Column (Squares 9, 10, 11, 12) -->
+      <div class="space green" id="square-19">Square 19</div>
+      <div class="space green" id="square-20">Square 20</div>
+      <div class="space grey" id="square-21">Square 21</div>
+      <div class="space blue" id="square-22">Square 22</div>
+    </div>
+
+
+
+    <!-- Game Pawn (Game Piece) -->
+    <div id="pawn" class="pawn"></div> <!-- Single Pawn -->
+
+    <!-- Bottom Ribbon -->
+    <div class="bottom-ribbon">
+      <p>Copyright @ 2024 TU/e</p>
+    </div>
+
+    <script src="scriptR.js"></script> <!-- Link to the JavaScript file -->
+</body>

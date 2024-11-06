@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f0f0f0;
+    height: 100vh;
+    display: flex;
+    /* Center puzzle-container horizontally */
+    justify-content: center;
+    align-items: center;
+}
+
+.puzzle-container {
+    display: flex;
+    /* Align stages horizontally */
+    flex-wrap: nowrap;
+    /* Prevent wrapping to a new line */
+    gap: 10px;
+    /* Space between stages */
+}
+
+.stage {
+    display: flex;
+    /* Align boxes horizontally */
+    gap: 5px;
+    /* Space between boxes */
+}
+
+.box {
+    border: 1px solid #aaa;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: lightgreen;
+    text-align: center;
+    cursor: grab;
+    position: relative;
+    height: 60px;
+    /* Example fixed height */
+
+
+}
+
+/* Add specific colors for different stages if needed */
+#product-stage .box {
+    background-color: #2C7C54;
+}
+
+#construction-stage .box {
+    background-color: #69A297;
+}
+
+#use-stage .box {
+    background-color: #98D4D4;
+}
+
+#end-life-stage .box {
+    background-color: #B7E6E6;
+}
+
+#boundary-info .box {
+    background-color: #D7F7F7;
+}
+
+/* Hide the draggable element while dragging */
+.hide {
+    display: none;
+    opacity: 0;
+}
+
+.over {
+    border: 2px dashed #000;
+    /* Example style */
+}
+
+
+/* this is for the large rectangles */
+.box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rectangle {
+    width: 48px;
+    /* Adjust the width if there is padding in the .box */
+    height: 480px;
+    /* Taller height for the rectangle */
+    background-color: #e0e0e0;
+    /* Different color to distinguish from the box */
+    margin-top: 10px;
+    /* Space between the box and the rectangle */
+    border-radius: 5px;
+}
+
+
+/* this part is for horizontal rectangles */
+
+#rectangle-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    gap: 10px;
+    /* Space between rectangles */
+    padding: 10px 0;
+    /* Padding at the top and bottom */
+}
+
+.rectangle-horizontal {
+    width: 48px;
+    /* Width is the same as the box */
+    height: 160px;
+    /* Height to match the vertical rectangles */
+    background-color: #e0e0e0;
+    /* Or any color you prefer */
+    border-radius: 5px;
+    cursor: grab;
+    /* Cursor to indicate dragging */
+}
+
+#rectangle-container {
+    z-index: 1000;
+    /* Ensures the container is above other content */
+}

@@ -1,0 +1,198 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    /* Set maximum width for the container */
+    margin: 20px auto;
+    /* Center the container and add vertical spacing */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    /* Center columns horizontally */
+    align-items: flex-start;
+    /* Align items at the start for uniformity */
+}
+
+/* Ensure the columns are well spaced */
+.column {
+    flex: 1;
+    /* Distributes space evenly among columns */
+    margin: 0 10px;
+    /* Add horizontal margin to create space between columns */
+}
+
+/* to add a bit of space between two columns */
+.column:last-child {
+    margin-right: 0;
+    /* Remove margin from the last column */
+}
+
+.card {
+    display: inline-block;
+    width: 100%;
+    /* Cards take the full width of their parent */
+    height: 60px;
+    /* Set a uniform height for all cards */
+    margin: 5px 0;
+    /* Vertical spacing between cards */
+    padding: 10px;
+    border: none;
+    /* Removed border */
+    background-color: #ffffff;
+    /* White background for cards */
+    cursor: pointer;
+    overflow: hidden;
+    /* Ensure text overflow is hidden */
+    text-align: left;
+    /* Align text to the left */
+}
+
+/* Height for both category and unit cards */
+.card.category {
+    height: 60px;
+    /* Height for category cards */
+}
+
+.card.unit {
+    height: 60px;
+    /* Height for unit cards */
+}
+
+.card p {
+    margin: 0;
+    /* Remove default paragraph margin */
+    line-height: 1.2;
+    /* Adjust line height for the text */
+}
+
+.selected {
+    background-color: rgb(191, 191, 194);
+}
+
+.correct-match {
+    background-color: green;
+}
+
+.incorrect-match {
+    background-color: red;
+}
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.matched {
+    background-color: grey;
+}
+
+.timer,
+.restart-button {
+    padding: 0.25rem 0.5rem;
+    /* Reduced padding */
+    margin-left: 0.5rem;
+    /* Adjusted margin */
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    /* Adjusted font size */
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.25rem 1rem;
+    /* Reduced padding */
+    background-color: #1F1D36;
+    color: #FFA80D;
+}
+
+.header-title {
+    font-size: 1.25rem;
+    /* Adjusted font size */
+}
+
+/* Styles for Category and Unit Grids */
+#category-grid {
+    display: flex;
+    /* Use flexbox for layout */
+    flex-direction: column;
+    /* Stack children vertically */
+    width: 400px;
+    /* Set width for category grid */
+    margin: 10px;
+    /* Adjust margin as needed */
+    padding: 10px;
+    /* Add padding for better spacing */
+    background-color: #f9f9f9;
+    /* Optional background color */
+}
+
+#unit-grid {
+    display: flex;
+    /* Use flexbox for layout */
+    flex-direction: column;
+    /* Stack children vertically */
+    width: 600px;
+    /* Set a smaller width for unit grid to ensure centering */
+    margin: 10px;
+    /* Adjust margin as needed */
+    padding: 10px;
+    /* Add padding for better spacing */
+    background-color: #f9f9f9;
+    /* Optional background color */
+}
+
+/* Font size adjustment for unit grid */
+#unit-grid .card {
+    font-size: 0.75rem;
+    /* Adjust the font size for unit grid cards */
+}
+
+#unit-grid .card p {
+    font-size: 0.75rem;
+    /* Adjust the font size for paragraphs in unit grid cards */
+}
+
+/* Add button styling */
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.complete-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.complete-btn:hover {
+    background-color: #45a049;
+}
+
+
+.ribbon-bottom {
+    bottom: 0;
+    background-color: #1F1D36; /* Background color for the bottom ribbon */
+    height: 30px; /* Adjust the height for the bottom ribbon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 10px; /* Smaller font size for the bottom ribbon */
+    font-family: 'Arial', sans-serif; /* Set the font for the ribbons */
+    width: 100%;
+    position: fixed;
+}

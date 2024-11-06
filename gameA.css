@@ -1,0 +1,195 @@
+/* General styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #eee;
+    color: #111;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1F1D36;
+    color: #ffa80d;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.timer {
+    padding: 5px 10px;
+    background-color: #FFA500;
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.restart-button {
+    background-color: #FFA500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.restart-button:hover {
+    background-color: #cc8400;
+}
+
+/* Vertically align the draggable elements on the left */
+.draggable-elements {
+    display: flex;
+    flex-direction: column; /* Stack them vertically */
+    position: absolute;
+    top: 100px;  /* Adjust vertical positioning */
+    left: 20px;  /* Align the draggables to the left side */
+    gap: 10px;   /* Space between each draggable element */
+}
+
+/* Rectangular draggable elements */
+.draggable {
+    height: 10vh;   /* Height is larger to create a rectangular shape */
+    width: 5vh;    /* Smaller width to keep the rectangle shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: move;
+    transition: opacity 0.2s;
+    background-color: #f0f0f0; /* Optional: add a background color if needed */
+    border: 1px solid #ccc;    /* Optional: add a border to highlight the rectangle */
+}
+
+.draggable img {
+    width: 100%; /* Make sure the image fits the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.draggable:hover {
+    opacity: 0.5;
+}
+
+/* Adjust the game container with the background image */
+.game-container {
+    position: relative;
+    background-repeat: no-repeat;
+    background-image: url('images/LCAStages.png'); /* Use updated background image */
+    background-size: contain;
+    background-position: center;
+    width: 80%; /* Make the container narrower */
+    height: 60vh; /* Adjust the height as needed */
+    margin: auto;
+}
+
+/* Only keep right-aligned droppable containers */
+.droppable {
+    position: absolute;
+    width: 5vh;    /* Match the width of the draggable rectangle */
+    height: 10vh;  /* Match the height of the draggable rectangle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2vh;
+    font-weight: bold;
+    border: 3px dashed #111;
+    transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
+}
+
+/* Example: position droppables based on background */
+.droppable[data-draggable-id="A1"] {
+    top: 130px;
+    left: 500px;
+}
+
+.droppable[data-draggable-id="A2"] {
+    top: 200px;
+    left: 450px;
+}
+
+.droppable[data-draggable-id="A3"] {
+    top: 270px;
+    left: 550px; /* Adjusted to align with background */
+}
+
+.droppable[data-draggable-id="C1"] {
+    top: 130px;
+    left: 850px; /* Adjusted to align with background */
+}
+
+.droppable[data-draggable-id="C2"] {
+    top: 200px;
+    left: 900px; /* Adjusted to align with background */
+}
+
+/* Styling for hovered and dropped states */
+.droppable span {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    pointer-events: none;
+}
+
+.droppable.droppable-hover {
+    border-width: 5px;
+    transform: scale(1.1);
+}
+
+.droppable.dropped {
+    border-style: solid;
+    color: #fff;
+}
+
+/* Progress bar container at the bottom */
+.progress-container {
+    width: 100%;
+    background-color: #ddd;
+    height: 20px;  /* Adjust the height as needed */
+    position: fixed;
+    bottom: 0;  /* Position the progress bar at the bottom */
+    left: 0;
+}
+
+/* Progress bar itself */
+.progress-bar {
+    width: 0%;  /* Initial progress */
+    height: 100%;
+    background-color: #4caf50;  /* Progress bar color (green) */
+    position: relative;
+    transition: width 0.3s ease;  /* Smooth transition effect */
+}
+
+/* Percentage display inside the progress bar */
+.progress-percentage {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);  /* Center the percentage text */
+    color: white;
+    font-weight: bold;
+}
+
+
+/* Bottom Ribbon Styling */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: #888;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8rem;
+}
+
+footer a {
+    color: #888;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
