@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const message = document.createElement('div');
         message.classList.add('completion-message');
         message.innerHTML = `
-          <h2>Well done on completing this challenge! 875</h2>
+          <h2>Well done on completing this challenge!</h2>
           <p>Your reward code is: <strong>875</strong></p>
         `;
         document.body.appendChild(message);
