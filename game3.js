@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
         message.classList.add('completion-message');
         message.innerHTML = `
           <h2>Well done on completing this challenge!</h2>
-          <p>Your reward code is: <strong>171</strong></p>
+          <p>Your reward code is: <strong>875</strong></p>
         `;
         document.body.appendChild(message);
 
