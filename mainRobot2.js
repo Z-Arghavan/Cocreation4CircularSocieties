@@ -1,12 +1,16 @@
 const passwords = {
     game5: "4444",
-    game3: "Ghana",
+    game3: "Rethink",
+    game1: "17Goals",
+    landgingR: "3R",
   };
   
   // Custom prompt messages for each game
   const promptMessages = {
-    game5: "This password comes from the Earth Over Shoot Day challenge. Type four times the number that you have arrived at.",
-    game3: "This password comes from the Illegal Waste Trafficking challenge. Type the name of the country that you have found:",
+    game5: "Password: 4444",
+    game3: "Password: Rethink",
+    game3: "Password: 17Goals",
+    landgingR: "Password: 3R",
   };
   
   // Custom incorrect password messages for each game
