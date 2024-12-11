@@ -2,7 +2,7 @@ const passwords = {
     game5: "4444",
     game3: "Relearn",
     game1: "17Goals",
-    landgingR: "3R",
+    landingR: "3R",
   };
   
   // Custom prompt messages for each game
