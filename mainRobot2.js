@@ -2,7 +2,7 @@ const passwords = {
     game5: "4444",
     game3: "Relearn",
     game1: "17Goals",
-    landingR: "3R",
+    landingR: "3R"
   };
   
   // Custom prompt messages for each game
@@ -10,7 +10,7 @@ const passwords = {
     game5: "Password: 4444",
     game3: "Password: Relearn",
     game1: "Password: 17Goals",
-    landingR: "Password: 3R",
+    landingR: "Password: 3R"
   };
   
   // Custom incorrect password messages for each game
