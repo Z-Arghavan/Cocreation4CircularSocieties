@@ -3,40 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Over</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
-        .message-container {
-            text-align: center;
-            background-color: #fff;
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-        .message-container h1 {
-            color: red;
-            font-size: 2rem;
-        }
-        .message-container p {
-            font-size: 1.5rem;
-            margin-top: 20px;
-        }
-    </style>
+    <title>EndGame</title>
+    <link href="game1.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.3.4/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-gray-200 font-sans leading-normal tracking-normal">
+    <div class="container mx-auto px-4 text-center">
+        <div class="flex justify-center">
+            <img src="images/RobotEND.png" alt="SDG Image" class="mt-4 mx-auto" style="max-width: 100%; height: auto;">
+        </div>
 
-    <div class="message-container">
-        <h1>Your code is</h1>
-        <p>396</p>
+        <!-- Button to go back to the main game page -->
+        <button id="goToMainMenu" class="bg-blue-500 text-white py-2 px-4 rounded mt-6">
+            Go to Main Game Menu
+        </button>
     </div>
 
+    <script>
+        // Add an event listener to the button to go back to the main game page
+        document.getElementById('goToMainMenu').addEventListener('click', () => {
+            window.location.href = "index.html"; // Update this to the correct path of your main menu
+        });
+    </script>
 </body>
 </html>
